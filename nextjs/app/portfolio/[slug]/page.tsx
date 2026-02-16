@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 
 import { getProjectBySlug } from "../../../lib/projects";
 
+export const runtime = "edge";
+
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
 ): Promise<Metadata> {

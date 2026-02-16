@@ -3,6 +3,8 @@ import { generateSignatureId } from "../../../lib/contractUtils";
 import { getContractByType } from "../../../lib/contracts";
 import { isRateLimited } from "../../../lib/rateLimit";
 
+export const runtime = "edge";
+
 const VALID_TYPES = ["msa", "nda", "diagnostic", "sow", "artifact"];
 
 export async function POST(request: Request) {

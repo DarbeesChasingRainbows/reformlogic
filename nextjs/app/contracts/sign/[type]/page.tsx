@@ -6,6 +6,8 @@ import ContractSignature from "../../../../components/forms/ContractSignature";
 import { interpolateContract, parseContractParams, renderContractHtml } from "../../../../lib/contractUtils";
 import { getContractByType } from "../../../../lib/contracts";
 
+export const runtime = "edge";
+
 export async function generateMetadata(
   { params }: { params: Promise<{ type: string }> },
 ): Promise<Metadata> {

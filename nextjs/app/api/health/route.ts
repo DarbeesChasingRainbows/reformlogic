@@ -1,5 +1,7 @@
 import { send } from "../../../lib/email";
 
+export const runtime = "edge";
+
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const checkEmail = url.searchParams.get("email") === "1";

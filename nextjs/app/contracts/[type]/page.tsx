@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 
 import { getContractByType } from "../../../lib/contracts";
 
+export const runtime = "edge";
+
 export async function generateMetadata(
   { params }: { params: Promise<{ type: string }> },
 ): Promise<Metadata> {

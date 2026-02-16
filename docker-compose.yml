@@ -1,0 +1,28 @@
+# ============================================
+# ReformLogic — Docker Compose
+# ============================================
+# Usage:
+#   docker compose up -d          # Start all services
+#   docker compose up --build     # Rebuild and start
+#   docker compose logs -f web    # Tail web logs
+#   docker compose down -v        # Stop & remove volumes
+# ============================================
+
+services:
+  # --- Deno Fresh 2 Application ---
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GIT_REVISION: ${GIT_REVISION:-dev}
+    ports:
+      - "8000:8000"
+    container_name: reformlogic
+    environment:
+      - DENO_ENV=production
+      - RESEND_API_KEY=${RESEND_API_KEY:-}
+      - NOTIFICATION_EMAIL=${NOTIFICATION_EMAIL:-hello@reformlogic.com}
+      - FROM_ADDRESS=${FROM_ADDRESS:-ReformLogic <noreply@reformlogic.com>}
+    restart: unless-stopped
+

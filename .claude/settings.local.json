@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Desktop_Commander__read_process_output",
+      "Bash(npx --yes mammoth:*)",
+      "Bash(deno task:*)"
+    ]
+  }
+}

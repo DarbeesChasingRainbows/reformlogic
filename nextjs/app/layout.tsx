@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Sora, Space_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "../components/site/Footer";
-import NavBar from "../components/site/NavBar";
+import Footer from "../components/site/Footer.tsx";
+import NavBar from "../components/site/NavBar.tsx";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const soraSans = Sora({
+  variable: "--font-sora-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
   subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -42,13 +45,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${soraSans.variable} ${spaceMono.variable}`}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-slate-950 text-slate-300 antialiased selection:bg-indigo-500/30`}
+        className="bg-slate-950 text-slate-300 antialiased selection:bg-indigo-500/30"
       >
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-slate-100 focus:px-4 focus:py-2 focus:text-slate-950"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-60 focus:rounded-md focus:bg-slate-100 focus:px-4 focus:py-2 focus:text-slate-950"
         >
           Skip to main content
         </a>

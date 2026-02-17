@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { projects } from "../../lib/projects";
+import { projects } from "../../lib/projects.ts";
 
 export const metadata: Metadata = {
   title: "Portfolio — ReformLogic",
 };
+
+export const runtime = "edge";
 
 export default function PortfolioPage() {
   return (

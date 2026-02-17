@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import DiagnosticForm from "../../../components/forms/DiagnosticForm";
+import DiagnosticForm from "../../../components/forms/DiagnosticForm.tsx";
 
 export const metadata: Metadata = {
   title: "Book a Diagnostic — ReformLogic",
 };
+
+export const runtime = "edge";
 
 export default function DiagnosticPage() {
   return (

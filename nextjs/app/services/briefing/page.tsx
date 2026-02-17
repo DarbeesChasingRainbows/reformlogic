@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import BriefingForm from "../../../components/forms/BriefingForm";
+import BriefingForm from "../../../components/forms/BriefingForm.tsx";
 
 export const metadata: Metadata = {
   title: "Request a Briefing — ReformLogic",
 };
+
+export const runtime = "edge";
 
 export default function BriefingPage() {
   return (

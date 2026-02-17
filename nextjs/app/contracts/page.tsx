@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { contracts } from "../../lib/contracts";
+import { contracts } from "../../lib/contracts.ts";
 
 export const metadata: Metadata = {
   title: "Agreements — ReformLogic",
 };
+
+export const runtime = "edge";
 
 export default function ContractsPage() {
   return (

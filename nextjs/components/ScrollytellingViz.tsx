@@ -44,7 +44,7 @@ export default function ScrollytellingViz() {
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444" />
           </marker>
           <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-            <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981" />
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#6366f1" />
           </marker>
         </defs>
 
@@ -72,18 +72,18 @@ export default function ScrollytellingViz() {
 
         <g className="cqrs-flow">
           <path d="M 50 150 C 150 150, 150 230, 170 230" fill="none" stroke="#ef4444" strokeWidth="4" strokeDasharray="10 10" className="animate-dash" markerEnd="url(#arrow-red)" />
-          <path d="M 450 350 C 350 350, 350 270, 330 270" fill="none" stroke="#10b981" strokeWidth="4" strokeDasharray="10 10" className="animate-dash-reverse" markerEnd="url(#arrow-emerald)" />
+          <path d="M 450 350 C 350 350, 350 270, 330 270" fill="none" stroke="#6366f1" strokeWidth="4" strokeDasharray="10 10" className="animate-dash-reverse" markerEnd="url(#arrow-emerald)" />
           <text x="70" y="140" fill="#f87171" fontFamily="monospace" fontSize="12">Command (Write)</text>
-          <text x="370" y="370" fill="#34d399" fontFamily="monospace" fontSize="12">Query (Read)</text>
+          <text x="370" y="370" fill="#a5b4fc" fontFamily="monospace" fontSize="12">Query (Read)</text>
           <rect x="180" y="215" width="20" height="30" fill="#7f1d1d" rx="2" />
-          <circle cx="310" cy="270" r="15" fill="#064e3b" />
+          <circle cx="310" cy="270" r="15" fill="#1e3a8a" />
         </g>
 
         <g className="frontend-ui">
           <rect x="350" y="30" width="120" height="80" rx="6" fill="#0f172a" stroke="#06b6d4" strokeWidth="2" />
           <circle cx="360" cy="42" r="3" fill="#ef4444" />
           <circle cx="370" cy="42" r="3" fill="#eab308" />
-          <circle cx="380" cy="42" r="3" fill="#22c55e" />
+          <circle cx="380" cy="42" r="3" fill="#6366f1" />
           <line x1="350" y1="52" x2="470" y2="52" stroke="#06b6d4" strokeWidth="1" />
           <text x="410" y="72" textAnchor="middle" fill="#a5f3fc" fontWeight="600" fontSize="12">Next.js</text>
           <path d="M 410 110 L 410 320" fill="none" stroke="#06b6d4" strokeWidth="2" strokeDasharray="4 4" markerEnd="url(#arrow-emerald)" />
@@ -99,8 +99,8 @@ export default function ScrollytellingViz() {
           <rect x="140" y="240" width="220" height="60" rx="4" fill="#0f172a" stroke="#6366f1" strokeWidth="1" />
           <text x="250" y="275" textAnchor="middle" fill="#c7d2fe" fontFamily="monospace" fontSize="14">Business Logic</text>
 
-          <rect x="140" y="310" width="220" height="60" rx="4" fill="#0f172a" stroke="#10b981" strokeWidth="1" />
-          <text x="250" y="345" textAnchor="middle" fill="#6ee7b7" fontFamily="monospace" fontSize="14">Shared Database</text>
+          <rect x="140" y="310" width="220" height="60" rx="4" fill="#0f172a" stroke="#3b82f6" strokeWidth="1" />
+          <text x="250" y="345" textAnchor="middle" fill="#93c5fd" fontFamily="monospace" fontSize="14">Shared Database</text>
 
           <line x1="250" y1="230" x2="250" y2="240" stroke="#475569" strokeWidth="4" />
           <line x1="250" y1="300" x2="250" y2="310" stroke="#475569" strokeWidth="4" />

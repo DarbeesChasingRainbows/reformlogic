@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import ContactForm from "../../components/forms/ContactForm";
+import ContactForm from "../../components/forms/ContactForm.tsx";
 
 export const metadata: Metadata = {
   title: "Contact — ReformLogic",
 };
+
+export const runtime = "edge";
 
 export default function ContactPage() {
   return (

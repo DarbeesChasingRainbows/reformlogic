@@ -1,0 +1,18 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "reformlogic-nextjs"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+# Environment Variables (Non-Secret)
+# Secrets like RESEND_API_KEY must be added via 'wrangler pages secret put'
+[vars]
+NOTIFICATION_EMAIL = "patrick@reformlogic.dev"
+FROM_ADDRESS = "ReformLogic <noreply@reformlogic.dev>"
+
+# KV Namespace for Rate Limiting (Recommended for Serverless)
+# Run: npx wrangler kv:namespace create RATE_LIMIT
+# Then paste the id below and uncomment:
+# [[kv_namespaces]]
+# binding = "RATE_LIMIT"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"

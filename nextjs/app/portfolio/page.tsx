@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { projects } from "../../lib/projects.ts";
+import { projects } from "../../lib/projects";
 
 export const metadata: Metadata = {
   title: "Portfolio — ReformLogic",

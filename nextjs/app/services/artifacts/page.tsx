@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import ArtifactForm from "../../../components/forms/ArtifactForm.tsx";
+import ArtifactForm from "../../../components/forms/ArtifactForm";
 
 export const metadata: Metadata = {
   title: "Specific Artifacts — ReformLogic",

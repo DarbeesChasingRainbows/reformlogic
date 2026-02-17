@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import ContractSignature from "../../../../components/forms/ContractSignature.tsx";
-import { interpolateContract, parseContractParams, renderContractHtml } from "../../../../lib/contractUtils.ts";
-import { getContractByType } from "../../../../lib/contracts.ts";
+import ContractSignature from "../../../../components/forms/ContractSignature";
+import { interpolateContract, parseContractParams, renderContractHtml } from "../../../../lib/contractUtils";
+import { getContractByType } from "../../../../lib/contracts";
 
 export const runtime = "edge";
 

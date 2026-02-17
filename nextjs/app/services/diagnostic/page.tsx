@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import DiagnosticForm from "../../../components/forms/DiagnosticForm.tsx";
+import DiagnosticForm from "../../../components/forms/DiagnosticForm";
 
 export const metadata: Metadata = {
   title: "Book a Diagnostic — ReformLogic",

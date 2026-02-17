@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Sora, Space_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "../components/site/Footer.tsx";
-import NavBar from "../components/site/NavBar.tsx";
+import Footer from "../components/site/Footer";
+import NavBar from "../components/site/NavBar";
 
 const soraSans = Sora({
   variable: "--font-sora-sans",

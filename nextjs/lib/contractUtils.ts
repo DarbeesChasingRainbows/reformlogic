@@ -1,4 +1,4 @@
-import type { ContractSection } from "./contracts.ts";
+import type { ContractSection } from "./contracts";
 
 /** HTML-escape a string to prevent XSS in contract text */
 export function escapeHtml(str: string): string {

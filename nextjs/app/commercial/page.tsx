@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import ScrollytellingViz from "../../components/ScrollytellingViz.tsx";
+import ScrollytellingViz from "../../components/ScrollytellingViz";
 
 export const metadata: Metadata = {
   title: "Software Architecture Consulting — ReformLogic",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import BriefingForm from "../../../components/forms/BriefingForm.tsx";
+import BriefingForm from "../../../components/forms/BriefingForm";
 
 export const metadata: Metadata = {
   title: "Request a Briefing — ReformLogic",

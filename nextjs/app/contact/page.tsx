@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import ContactForm from "../../components/forms/ContactForm.tsx";
+import ContactForm from "../../components/forms/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact — ReformLogic",

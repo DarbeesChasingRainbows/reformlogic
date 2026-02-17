@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { contracts } from "../../lib/contracts.ts";
+import { contracts } from "../../lib/contracts";
 
 export const metadata: Metadata = {
   title: "Agreements — ReformLogic",

@@ -4,8 +4,6 @@ import { notFound } from "next/navigation";
 
 import { getProjectBySlug, projects } from "../../../lib/projects";
 
-export const runtime = "edge";
-
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }

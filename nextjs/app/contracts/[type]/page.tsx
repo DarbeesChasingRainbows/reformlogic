@@ -4,8 +4,6 @@ import { notFound } from "next/navigation";
 
 import { contracts, getContractByType } from "../../../lib/contracts";
 
-export const runtime = "edge";
-
 export function generateStaticParams() {
   return contracts.map((contract) => ({ type: contract.slug }));
 }

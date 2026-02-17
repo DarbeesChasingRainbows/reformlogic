@@ -6,7 +6,7 @@ import ContractSignature from "../../../../components/forms/ContractSignature";
 import { interpolateContract, parseContractParams, renderContractHtml } from "../../../../lib/contractUtils";
 import { contracts, getContractByType } from "../../../../lib/contracts";
 
-export const dynamicParams = false;
+export const runtime = "edge";
 
 export function generateStaticParams() {
   return contracts.map((contract) => ({ type: contract.slug }));

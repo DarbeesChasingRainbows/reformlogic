@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "ReformLogic — Technology That Serves Your Mission",
     description:
       "Software architecture consulting and church technology services. 12+ years of .NET expertise, RockRMS, and enterprise system design.",
-    url: "https://reformlogic.com",
+    url: "https://reformlogic.dev",
     type: "website",
   },
   twitter: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       "Software architecture consulting and church technology services. 12+ years of .NET expertise.",
   },
   alternates: {
-    canonical: "https://reformlogic.com",
+    canonical: "https://reformlogic.dev",
   },
 };
 

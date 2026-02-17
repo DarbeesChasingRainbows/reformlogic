@@ -23,7 +23,7 @@ export default define.page(function App({ Component }) {
           content="Software architecture consulting and church technology services. 12+ years of .NET expertise, RockRMS, and enterprise system design."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://reformlogic.com" />
+        <meta property="og:url" content="https://reformlogic.dev" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -35,7 +35,7 @@ export default define.page(function App({ Component }) {
           content="Software architecture consulting and church technology services. 12+ years of .NET expertise."
         />
         {/* Canonical */}
-        <link rel="canonical" href="https://reformlogic.com" />
+        <link rel="canonical" href="https://reformlogic.dev" />
       </head>
       <body class="bg-slate-950 text-slate-300 font-sans antialiased selection:bg-indigo-500/30">
         {/* Navigation */}

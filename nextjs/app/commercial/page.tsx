@@ -58,7 +58,8 @@ export default function CommercialPage() {
             <Step idx={2} phase="Phase II: Boundaries" title="Ports & Adapters" description="Dependencies point inward so infrastructure stays replaceable." phaseClassName="text-emerald-500" />
             <Step idx={3} phase="Phase III: Separation" title="CQRS" description="Separate writes and reads for scalability and clarity." phaseClassName="text-amber-500" />
             <Step idx={4} phase="Phase IV: Delivery" title="Fast modern frontends" description="Server rendering with focused client interactivity." phaseClassName="text-cyan-500" />
-            <Step idx={5} phase="Phase V: Scale" title="Monolith or Microservices" description="Choose what fits now, keep migration paths clean." phaseClassName="text-rose-500" />
+            <Step idx={5} phase="Phase V: The Empire" title="The Monolith" description="Centralized power can move fast early, but coupling increases risk and slows evolution." phaseClassName="text-rose-500" />
+            <Step idx={6} phase="Phase VI: The Schism" title="Microservices" description="Split bounded contexts into resilient services connected by events and explicit contracts." phaseClassName="text-fuchsia-500" />
           </div>
 
           <div className="sticky top-0 hidden h-screen w-1/2 items-center justify-center border-l border-slate-800/50 bg-slate-950/50 backdrop-blur-sm md:flex">

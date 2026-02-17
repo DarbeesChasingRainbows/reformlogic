@@ -64,7 +64,7 @@ export default function ContractSignature(props: ContractSignatureProps) {
 
   if (status === "success") {
     return (
-      <div className="rounded-lg border border-emerald-500/30 bg-emerald-900/20 p-8 text-center">
+      <div role="status" aria-live="polite" className="rounded-lg border border-emerald-500/30 bg-emerald-900/20 p-8 text-center">
         <p className="mb-2 text-lg font-medium text-emerald-400">Agreement Signed</p>
         {signatureId && <p className="mb-4 font-mono text-sm text-slate-500">Signature ID: {signatureId}</p>}
         <p className="text-sm text-slate-400">
@@ -75,12 +75,14 @@ export default function ContractSignature(props: ContractSignatureProps) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-6">
-      <div className="hidden">
-        <input type="text" value={website} onChange={(event) => setWebsite(event.target.value)} tabIndex={-1} autoComplete="off" />
+    <form onSubmit={onSubmit} className="space-y-6" aria-describedby="signature-form-help">
+      <p id="signature-form-help" className="sr-only">All required fields must be completed before signing.</p>
+
+      <div className="hidden" aria-hidden="true">
+        <input id="signature-website" type="text" value={website} onChange={(event) => setWebsite(event.target.value)} tabIndex={-1} autoComplete="off" />
       </div>
 
-      {status === "error" && <div className="rounded-lg border border-red-500/30 bg-red-900/20 p-4 text-sm text-red-400">{errorMsg}</div>}
+      {status === "error" && <div role="alert" className="rounded-lg border border-red-500/30 bg-red-900/20 p-4 text-sm text-red-400">{errorMsg}</div>}
 
       <div className="border-t-2 border-indigo-500/30 pt-8">
         <h3 className="mb-2 text-xl font-semibold text-slate-100">Electronic Signature</h3>
@@ -88,25 +90,32 @@ export default function ContractSignature(props: ContractSignatureProps) {
       </div>
 
       <div>
+        <label htmlFor="signature-name" className="mb-2 block text-xs uppercase tracking-widest text-slate-500">Full Legal Name *</label>
         <input
+          id="signature-name"
           type="text"
           required
           value={signedName}
           onChange={(event) => setSignedName(event.target.value)}
           className="w-full rounded-lg border border-slate-800 bg-slate-900 px-4 py-3 text-lg text-slate-200"
           placeholder="Type your full legal name"
+          autoComplete="name"
         />
       </div>
 
-      <label className="flex items-start gap-3 text-sm text-slate-400">
-        <input type="checkbox" checked={agreeTerms} onChange={(event) => setAgreeTerms(event.target.checked)} className="mt-1 h-4 w-4" />
-        I have read and agree to the terms of this agreement.
-      </label>
+      <fieldset className="space-y-4" aria-required="true">
+        <legend className="text-xs uppercase tracking-widest text-slate-500">Required Consents</legend>
 
-      <label className="flex items-start gap-3 text-sm text-slate-400">
-        <input type="checkbox" checked={agreeEsign} onChange={(event) => setAgreeEsign(event.target.checked)} className="mt-1 h-4 w-4" />
-        I consent to signing this agreement electronically.
-      </label>
+        <label htmlFor="agree-terms" className="flex items-start gap-3 text-sm text-slate-400">
+          <input id="agree-terms" type="checkbox" checked={agreeTerms} onChange={(event) => setAgreeTerms(event.target.checked)} className="mt-1 h-4 w-4" />
+          I have read and agree to the terms of this agreement.
+        </label>
+
+        <label htmlFor="agree-esign" className="flex items-start gap-3 text-sm text-slate-400">
+          <input id="agree-esign" type="checkbox" checked={agreeEsign} onChange={(event) => setAgreeEsign(event.target.checked)} className="mt-1 h-4 w-4" />
+          I consent to signing this agreement electronically.
+        </label>
+      </fieldset>
 
       <button type="submit" disabled={!canSubmit || status === "sending"} className="w-full rounded-lg bg-indigo-600 px-6 py-4 text-sm font-medium text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 disabled:cursor-not-allowed disabled:bg-slate-800 disabled:text-slate-600">
         {status === "sending" ? "Processing Signature..." : "Sign Agreement"}

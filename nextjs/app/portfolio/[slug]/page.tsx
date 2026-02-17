@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { getProjectBySlug } from "../../../lib/projects";
+import { getProjectBySlug, projects } from "../../../lib/projects";
 
-export const runtime = "edge";
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
 
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },

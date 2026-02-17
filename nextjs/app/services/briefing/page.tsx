@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   title: "Request a Briefing — ReformLogic",
 };
 
-export const runtime = "edge";
-
 export default function BriefingPage() {
   return (
     <section className="min-h-screen px-6 pb-32 pt-24">

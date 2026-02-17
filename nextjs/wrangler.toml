@@ -2,7 +2,11 @@
 name = "reformlogic-nextjs"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = ".vercel/output/static"
+main = ".open-next/worker.js"
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
 
 # Environment Variables (Non-Secret)
 # Secrets like RESEND_API_KEY must be added via 'wrangler pages secret put'

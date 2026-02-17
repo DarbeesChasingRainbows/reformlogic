@@ -1,8 +1,6 @@
 import { sendConfirmation, sendNotification } from "../../../lib/email";
 import { isRateLimited } from "../../../lib/rateLimit";
 
-export const runtime = "edge";
-
 const VALID_TYPES = ["diagnostic", "briefing", "artifact", "general"];
 
 export async function POST(request: Request) {

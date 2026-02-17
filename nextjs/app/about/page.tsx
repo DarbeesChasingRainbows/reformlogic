@@ -7,8 +7,6 @@ export const metadata: Metadata = {
     "Patrick Darbee — Senior .NET Technical Leader with 12+ years of experience in enterprise architecture, church technology, and legacy system modernization.",
 };
 
-export const runtime = "edge";
-
 export default function AboutPage() {
   return (
     <section className="min-h-screen px-6 pb-32 pt-24">

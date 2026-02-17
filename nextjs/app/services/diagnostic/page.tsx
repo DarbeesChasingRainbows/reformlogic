@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   title: "Book a Diagnostic — ReformLogic",
 };
 
-export const runtime = "edge";
-
 export default function DiagnosticPage() {
   return (
     <section className="min-h-screen px-6 pb-32 pt-24">

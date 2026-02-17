@@ -7,8 +7,6 @@ export const metadata: Metadata = {
     "RockRMS consulting, church management system migration, websites, and ongoing technology partnership for churches and ministries.",
 };
 
-export const runtime = "edge";
-
 export default function ChurchesPage() {
   return (
     <>

@@ -4,12 +4,10 @@ import Link from "next/link";
 import ScrollytellingViz from "../../components/ScrollytellingViz";
 
 export const metadata: Metadata = {
-  title: "Software Architecture Consulting — ReformLogic",
+  title: "Commercial Technology Consulting — ReformLogic",
   description:
     "Enterprise .NET architecture consulting, Umbraco CMS expertise, legacy migration, and custom software development.",
 };
-
-export const runtime = "edge";
 
 export default function CommercialPage() {
   return (

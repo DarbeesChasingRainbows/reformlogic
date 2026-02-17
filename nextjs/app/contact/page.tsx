@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   title: "Contact — ReformLogic",
 };
 
-export const runtime = "edge";
-
 export default function ContactPage() {
   return (
     <section className="min-h-screen px-6 pb-32 pt-24">

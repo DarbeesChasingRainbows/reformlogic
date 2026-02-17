@@ -18,8 +18,6 @@ const items = [
   "Documentation",
 ];
 
-export const runtime = "edge";
-
 export default function ArtifactsPage() {
   return (
     <section className="min-h-screen px-6 pb-32 pt-24">

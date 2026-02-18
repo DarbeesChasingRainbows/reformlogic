@@ -9,7 +9,7 @@ pages_build_output_dir = ".open-next"
 
 [assets]
 directory = ".open-next/assets"
-binding = "ASSETS"
+binding = "STATIC_ASSETS"
 
 # Environment Variables (Non-Secret)
 # Secrets like RESEND_API_KEY must be added via 'wrangler pages secret put'

@@ -1,0 +1,283 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1c1f24;
+  --foreground: #dbe2ea;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sora-sans);
+  --font-mono: var(--font-space-mono);
+
+  /* Brand palette */
+  --color-charcoal: #1c1f24;
+  --color-warm-slate: #2e3440;
+  --color-muted-forest: #3730a3;
+
+  /* Remap existing utility usage to the new palette */
+  --color-slate-950: #1c1f24;
+  --color-slate-900: #2e3440;
+  --color-slate-800: #3b4350;
+  --color-slate-700: #4a5362;
+  --color-slate-600: #5f697b;
+  --color-slate-500: #808a9c;
+  --color-slate-400: #a9b2bf;
+  --color-slate-300: #c8ced8;
+  --color-slate-200: #d9dee6;
+  --color-slate-100: #eef2f7;
+
+  --color-indigo-600: #4f46e5;
+  --color-indigo-500: #6366f1;
+  --color-indigo-400: #818cf8;
+  --color-indigo-300: #a5b4fc;
+
+  --color-emerald-600: #2563eb;
+  --color-emerald-500: #3b82f6;
+  --color-emerald-400: #60a5fa;
+  --color-emerald-300: #93c5fd;
+
+  --color-cyan-500: #38bdf8;
+  --color-amber-500: #a78bfa;
+  --color-rose-500: #8b5cf6;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sora-sans), sans-serif;
+}
+
+
+
+/* ===== Migrated from Fresh assets/styles.css ===== */
+
+/* Pulse animation for the ghost idea */
+@keyframes pulse-ghost {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+}
+
+/* Animated dashes for data flow lines */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+/* SVG path drawing setup */
+.path-draw {
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+}
+
+/* Ghost idea pulse */
+.ghost-idea-animate {
+  animation: pulse-ghost 2s infinite;
+}
+
+/* Dash animation utility */
+.animate-dash {
+  animation: dash 2s linear infinite;
+}
+
+.animate-dash-reverse {
+  animation: dash 2s linear infinite reverse;
+}
+
+/* Scrollytelling visualization state machine */
+#viz-container {
+  transition: all 0.5s ease;
+}
+
+#viz-container[data-step="0"] .ghost-idea {
+  opacity: 0.5;
+  stroke-dasharray: 4 4;
+  animation: pulse-ghost 2s infinite;
+}
+
+#viz-container[data-step="0"] .core-domain {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+#viz-container[data-step="0"] .hexagon-shield {
+  opacity: 0;
+}
+
+#viz-container[data-step="0"] .cqrs-flow,
+#viz-container[data-step="0"] .frontend-ui,
+#viz-container[data-step="0"] .monolith,
+#viz-container[data-step="0"] .microservices {
+  opacity: 0;
+}
+
+#viz-container[data-step="1"] .ghost-idea {
+  opacity: 0;
+}
+
+#viz-container[data-step="1"] .core-domain {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#viz-container[data-step="1"] .hexagon-shield,
+#viz-container[data-step="1"] .cqrs-flow,
+#viz-container[data-step="1"] .frontend-ui,
+#viz-container[data-step="1"] .monolith,
+#viz-container[data-step="1"] .microservices {
+  opacity: 0;
+}
+
+#viz-container[data-step="2"] .ghost-idea {
+  opacity: 0;
+}
+
+#viz-container[data-step="2"] .core-domain {
+  opacity: 1;
+}
+
+#viz-container[data-step="2"] .hexagon-shield {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+#viz-container[data-step="2"] .hexagon-shield .path-draw {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1.5s ease-out;
+}
+
+#viz-container[data-step="2"] .cqrs-flow,
+#viz-container[data-step="2"] .frontend-ui,
+#viz-container[data-step="2"] .monolith,
+#viz-container[data-step="2"] .microservices {
+  opacity: 0;
+}
+
+#viz-container[data-step="3"] .ghost-idea {
+  opacity: 0;
+}
+
+#viz-container[data-step="3"] .core-domain {
+  opacity: 1;
+}
+
+#viz-container[data-step="3"] .hexagon-shield {
+  opacity: 0.3;
+  transition: opacity 0.5s;
+}
+
+#viz-container[data-step="3"] .cqrs-flow {
+  opacity: 1;
+  transition: opacity 0.5s 0.3s;
+}
+
+#viz-container[data-step="3"] .frontend-ui,
+#viz-container[data-step="3"] .monolith,
+#viz-container[data-step="3"] .microservices {
+  opacity: 0;
+}
+
+#viz-container[data-step="4"] .ghost-idea {
+  opacity: 0;
+}
+
+#viz-container[data-step="4"] .core-domain {
+  opacity: 1;
+}
+
+#viz-container[data-step="4"] .hexagon-shield {
+  opacity: 0.3;
+}
+
+#viz-container[data-step="4"] .cqrs-flow {
+  opacity: 1;
+}
+
+#viz-container[data-step="4"] .frontend-ui {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease-out;
+}
+
+#viz-container[data-step="4"] .monolith,
+#viz-container[data-step="4"] .microservices {
+  opacity: 0;
+}
+
+#viz-container[data-step="5"] .ghost-idea,
+#viz-container[data-step="5"] .core-domain,
+#viz-container[data-step="5"] .hexagon-shield,
+#viz-container[data-step="5"] .cqrs-flow,
+#viz-container[data-step="5"] .frontend-ui {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#viz-container[data-step="5"] .monolith {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+
+#viz-container[data-step="5"] .microservices {
+  opacity: 0;
+}
+
+#viz-container[data-step="6"] .monolith {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease-in;
+}
+
+#viz-container[data-step="6"] .microservices {
+  opacity: 1;
+  transition: opacity 0.7s ease-out 0.5s;
+}
+
+/* Initial states for stepped elements */
+.frontend-ui {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.monolith {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.microservices,
+.cqrs-flow,
+.hexagon-shield,
+.core-domain,
+.ghost-idea {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.microservices {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #viz-container,
+  #viz-container * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  #viz-container .path-draw {
+    stroke-dashoffset: 0;
+  }
+}

@@ -2,12 +2,14 @@
 name = "reformlogic-nextjs"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
+main = ".open-next/worker.js"
 
-# For Cloudflare Pages
-pages_build_output_dir = ".open-next"
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
 
 # Environment Variables (Non-Secret)
-# Secrets like RESEND_API_KEY must be dealt dealt ' 'wrangler pages secret put'
+# Secrets like RESEND_API_KEY must be added via 'wrangler secret put'
 [vars]
 NOTIFICATION_EMAIL = "patrick@reformlogic.dev"
 FROM_ADDRESS = "ReformLogic <noreply@reformlogic.dev>"

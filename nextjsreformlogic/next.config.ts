@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-	/* config options here */
+	// Disable image optimization to avoid resvg.wasm dependency on Windows
+	images: {
+		unoptimized: true,
+	},
+	// Ensure assets are served correctly on Cloudflare Pages
+	assetPrefix: undefined,
+	basePath: ''
 };
 
 export default nextConfig;
